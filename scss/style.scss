@@ -1,0 +1,189 @@
+@import 'config';
+@import 'main';
+@import 'icons';
+@import 'scrollbar';
+@import 'buttons';
+@import 'mobile';
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,700;1,300;1,400&family=Gabarito:wght@500&family=Sacramento&display=swap');
+
+body {
+    background-color: set-text-color("p");
+    font-family: var(--text);
+    line-height: 1.6;
+
+
+
+}
+
+
+#banner {
+
+    width: 100%;
+    height: 500px;
+
+    overflow: hidden;
+
+    a {
+        color: set-text-color("p");
+        ;
+        display: inline;
+    }
+
+
+
+
+    @include position(img, -100%, 15%, relative);
+
+    img {
+
+        width: auto;
+        height: 100%;
+
+    }
+
+}
+
+
+
+.circleOne {
+    background: linear-gradient($dark-color, $light-color);
+    display: block;
+    background-color: $light-color;
+    font-size: large;
+    width: auto;
+    height: 500px;
+    overflow: hidden;
+    opacity: 1;
+    z-index: -1;
+
+    @include position(".title", 40%, 45%, relative);
+
+    .title {
+        z-index: 2;
+
+
+        h1 {
+            @extend %h1;
+            color: set-text-color("p");
+
+        }
+
+        h2 {
+            //use inheritance
+            @extend %h2;
+            color: set-text-color("p");
+        }
+    }
+
+
+}
+
+@include position(".subtitle", 30%, 52%, relative);
+
+.subtitle {
+
+    z-index: 2;
+
+    p {
+        @extend %font-setting;
+        border-left: 1px solid $white-shade;
+        padding-left: 1%;
+        width: 200px;
+        font-family: var(--serif);
+        font-size: x-large;
+        letter-spacing: 1px;
+        line-height: 20px;
+
+        display: inline-block;
+
+
+    }
+
+    @include position("a", -30%, -2%, relative);
+
+    a {
+        display: inline-block;
+
+    }
+
+
+}
+
+@include position(menu, 0%, 57%, absolute);
+
+menu {
+
+    font-size: small;
+
+    ul {
+
+        z-index: 3;
+        list-style-type: none;
+    }
+
+    li {
+
+        display: inline-block;
+        font-family: var(--serif);
+    }
+
+
+    a {
+        @extend %font-setting;
+        color: set-text-color("p");
+        font-weight: bolder;
+        letter-spacing: 2px;
+        transition: all ease-in-out 500ms;
+
+        &:hover {
+            letter-spacing: 5px;
+            transition: all ease-in-out 500ms;
+
+
+
+        }
+    }
+
+
+
+}
+
+
+footer {
+    display: block;
+    height: 30%;
+    width: 98%;
+    background-image: url("../images/footer.png");
+    background-size: 500px;
+    background-repeat: repeat-x;
+    margin-top: 100px;
+    background-position: center bottom;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 97%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    column-gap: 5%;
+
+
+    .detail {
+        //making containers equal
+        width: 90%;
+        margin-left: 5%;
+        flex-grow: 0;
+        flex-shrink: 0;
+
+        flex-basis: 300px;
+
+
+
+    }
+
+
+    img {
+        width: 40px;
+    }
+}

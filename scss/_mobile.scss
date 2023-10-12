@@ -1,0 +1,71 @@
+@media(max-width:700px) {
+
+    #banner {
+        img {
+            left: -80%;
+        }
+    }
+
+    menu {
+        position: absolute;
+        left: -40%;
+
+
+
+
+    }
+
+
+    #banner {
+        .title {
+            left: 20%;
+
+            h1 {
+                font-size: 90px;
+            }
+
+            h2 {
+                font-size: 70px;
+                position: relative;
+
+            }
+        }
+    }
+
+
+    .subtitle {
+
+        margin-left: -118px;
+    }
+
+
+
+    .history {
+
+        margin-top: 29px;
+
+
+    }
+
+    .flexcontainer {
+        flex-direction: column;
+        width: 100%;
+        overflow: auto;
+
+
+        li {
+            border-radius: 100%;
+
+
+
+
+        }
+    }
+
+    .blog {
+        height: 1200px;
+margin-left: -15%;
+grid-gap: 2%;
+
+    }
+}

@@ -1,0 +1,33 @@
+@mixin grid-icon($name) {
+  .icon-#{$name} {
+    background-image: url("../images/#{$name}.png");
+    position: relative;
+    top: 0;
+    left: 45%;
+    width: 40px;
+    height: 40px;
+    background-size: 40px;
+  }
+}
+
+@mixin grid-spring($name) {
+  .spring-#{$name} {
+    background-image: url("../images/#{$name}.jpg");
+    position: relative;
+
+    top: 0;
+    left: 5%;
+    width: 220px;
+    height: 270px;
+    background-size: 230px;
+  }
+}
+
+@mixin position($name, $top, $left, $pos) {
+  #{$name} {
+    position: $pos;
+    top: $top;
+    left: $left;
+
+  }
+}

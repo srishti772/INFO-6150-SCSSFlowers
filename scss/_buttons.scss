@@ -1,0 +1,44 @@
+%btn {
+    display: inline-block;
+    border-radius: 20px;
+    border: 2px solid $white-shade;
+    text-decoration: none;
+    padding: 5px;
+
+    & a:hover {
+        transform: scale(0.98);
+        color: $primary-color;
+        background-color: $primary-color;
+    }
+}
+
+.btn-buyNow {
+    @extend %btn;
+    background-color: darken($color: $light-color, $amount: 20%);
+
+
+
+    &:hover {
+
+        background-color: transparent;
+    }
+
+
+
+}
+
+
+
+
+.btn-Explore {
+    @extend %btn;
+
+    &:hover {
+
+        background-color: darken($color: $light-color, $amount: 20%);
+    }
+
+
+
+
+}

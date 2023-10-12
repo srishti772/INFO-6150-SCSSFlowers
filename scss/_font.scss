@@ -1,0 +1,81 @@
+@import 'config';
+
+
+$title: 'Sacramento', cursive;
+$para: 'Gabarito', cursive;
+$body: 'Comic Neue', cursive;
+
+
+$font-size: (
+    "large":90px,
+    "mainHeading":150px,
+    "mainSubheading":120px
+);
+
+:root {
+    --cursive:#{$title};
+    --serif:#{$para};
+    --text:#{$body};
+}
+
+
+
+
+%font-setting {
+    color: $white-shade;
+    text-decoration: none;
+    font-weight: lighter;
+    line-height: 1px;
+}
+
+
+%heading-para {
+    font-family: var(--serif);
+    display: inline;
+    line-height: -20px;
+    color: $white-shade;
+    text-transform: uppercase;
+}
+
+@function set-text-color($heading) {
+    @if($heading=="h1") {
+        //contrast of bg is greater than 70 then its light color
+        @return darken($color: $dark-color, $amount: 40%);
+    }
+
+    @if($heading=="p") {
+        @return $white-shade;
+    }
+
+    @else {
+        @return darken($color: $dark-color, $amount: 70%);
+    }
+}
+
+
+%h1 {
+    color: $white-shade;
+    text-decoration: none;
+    font-weight: lighter;
+    line-height: 1px;
+    font-size: map-get($font-size, "mainSubheading");
+    font-family: var(--cursive);
+    // color: darken($color:$dark-color, $amount: 40%);
+    color: set-text-color("h2");
+    text-decoration: none;
+
+    display: inline;
+
+}
+
+%h2 {
+    color: $white-shade;
+    text-decoration: none;
+    font-weight: lighter;
+    line-height: 1px;
+    display: inline;
+    letter-spacing: -3px;
+    font-size: map-get($font-size, "mainSubheading");
+    // color: darken($color:$dark-color, $amount: 70%);
+    color: set-text-color("h1");
+}
